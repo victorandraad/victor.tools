@@ -32,7 +32,7 @@
         </div>
 
         <div class="flex gap-12 mt-20">
-            <a class="self-center text-white" href="">Expiremente agora ></a>
+            <a class="self-center text-white" href="#sort">Expiremente agora ></a>
         </div>
     </div>
     
