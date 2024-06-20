@@ -11,7 +11,7 @@
     
     <label class="flex items-center space-x-3">
       <input type="checkbox" v-model="withAnimation" class="form-checkbox rounded text-indigo-600">
-      <span>Animation</span>
+      <span>coming soon</span>
     </label>
   </div>
 
