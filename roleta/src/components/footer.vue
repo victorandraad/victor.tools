@@ -16,10 +16,9 @@
 
         <div class="flex flex-wrap justify-center pt-10">
             <ul class="flex gap-10">
-                <li>© 2024 Relume. Todos os direitos reservados.</li>
-                <li>Política de Privacidade</li>
-                <li>Termos de Serviço</li>
-                <li>Configurações de Cookies</li>
+                <li>&copy; 2024 Victor Silva. Todos os direitos reservados.</li>
+                <li><a href="#/policy">Política de Privacidade</a></li>
+                <li><a href="#/terms">Termos de Serviço</a></li>
             </ul>
         </div>
     </div>  

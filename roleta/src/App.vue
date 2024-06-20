@@ -22,12 +22,16 @@
   import Services from './Services.vue'
   import rodape from './components/footer.vue'
   import Roleta from './Roleta.vue'
+  import privacy_policy from './privacy_policy.vue'
+  import use_terms from './use_terms.vue'
 
   const routes = {
-    '/': Home,
-    '/about' : About,
+    '/'         : Home,
+    '/about'    : About,
     '/services' : Services,
-    '/roleta' : Roleta
+    '/roleta'   : Roleta,
+    '/terms'    : use_terms,
+    '/policy'    : privacy_policy
   }
   
   const currentPath = ref(window.location.hash)
