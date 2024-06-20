@@ -1,7 +1,7 @@
 <template>
     <div class="pl-10 flex flex-col justify-center">
         <div class="flex-column text-start w-3/4 pt-20">
-            <h1>Como funciona o sorteio de times</h1>
+            <h2 class="text-2xl">Como funciona o sorteio de times</h2>
             <p>Essa ferramente oferece uma maneira fácil e eficiente de sortear times para jogos. Basta seguir alguns passos simples e você terá os tiomes definidos rapidamente</p>
         </div>
 
@@ -32,11 +32,17 @@
         </div>
 
         <div class="flex gap-12 mt-20">
-            <a class="self-center text-white" href="#sort">Expiremente agora ></a>
+            <button class="self-center text-white" @click="navigateToRoleta">Expiremente agora ></button>
         </div>
     </div>
     
 </template>
+
+<script setup>
+const navigateToRoleta = () => {
+  window.location.href = '#/roleta'
+};
+</script>
 
 <style scoped>
     h2{
