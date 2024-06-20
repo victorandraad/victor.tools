@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import Typewriter from 'typewriter-effect/dist/core';
 
 onMounted(() => {
@@ -13,6 +13,17 @@ onMounted(() => {
     .deleteAll()
     .start();
 });
+
+const portifolio = (() => {
+    window.location.href = '#/about'
+})
+
+const showMessageModal = ref(false);
+
+const openEmailClient = () => {
+    window.open('mailto:victor.daniels@outlook.com.br', '_blank');
+};
+
 </script>
 
 <template>
@@ -31,11 +42,22 @@ onMounted(() => {
             <h3 class="text-2xl">Victor Silva</h3>
             <p>Desenvolvedor apaixonado por tecnologia e inovação.</p>
             <div class="flex gap-2 mt-4">
-                <button class="text-sm" type="button" @click="">Entrar em contato</button>
-                <button class="text-sm" type="button" @click="">Ver meu portfólio</button>
+                <button class="text-sm" type="button" @click="showMessageModal = true">Entrar em contato</button>
+                <button class="text-sm" type="button" @click="portifolio">Ver meu portfólio</button>
             </div>
         </div>
         <img class="rounded-full" src="https://avatars.githubusercontent.com/u/68758638?v=4" alt="">
+    </div>
+
+    <!-- Modal para opções de contato -->
+    <div v-if="showMessageModal" class="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center">
+        <div class="flex flex-col p-5 rounded shadow-lg border rounded w-1/3">
+            <h3 class="text-xl mb-4">Entre em Contato</h3>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded mb-2" @click="openEmailClient">Enviar Email</button>
+            <a class="bg-green-500 text-white py-2 px-4 rounded mb-2 text-center" href="https://wa.me/+5531972018637" target="_blank">WhatsApp</a>
+            <a class="bg-blue-600 text-white py-2 px-4 rounded mb-2 block text-center" href="https://www.linkedin.com/in/victorandraad" target="_blank">LinkedIn</a>
+            <button class="bg-gray-500 text-white py-2 px-4 rounded mt-2" @click="showMessageModal = false">Fechar</button>
+        </div>
     </div>
 </template>
 

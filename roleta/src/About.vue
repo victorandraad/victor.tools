@@ -1,68 +1,68 @@
 <script setup>
 import { ref } from 'vue';
 
-var posts = ref(3)
-var followers = ref(100)
-var following = ref(100)
+const posts = ref(3);
+const followers = ref(100);
+const following = ref(100);
 
-var videoUrl = ref("https://www.youtube.com/embed/BN0gBgGBjvs?si=GWtHjycHygGu2pti")
+const follow = () => {
+    window.open('https://www.instagram.com/victordanielkk/', '_blank');
+};
 
+const showMessageModal = ref(false);
+
+const openEmailClient = () => {
+    window.open('mailto:victor.daniels@outlook.com.br', '_blank');
+};
+
+const videoUrl = ref("https://www.youtube.com/embed/BN0gBgGBjvs?si=GWtHjycHygGu2pti");
 </script>
 
 <template>
     <div class="flex gap-12 mr-10 ml-10 justify-center mt-20 flex-wrap">
         <img class="rounded-full h-64 self-center" src="https://avatars.githubusercontent.com/u/68758638?v=4" alt="github_profile_icon">
         <div class="flex flex-col ml-5">
-
             <div class="flex gap-5">
                 <h3 class="text-2xl self-center">luzakayn</h3>
-                <button class="bg-blue-500 text-sm">Seguir</button>
-                <button class="text-sm">Enviar Mensagem</button>
+                <button class="bg-blue-500 text-sm" @click="follow">Seguir</button>
+                <button class="text-sm" @click="showMessageModal = true">Enviar Mensagem</button>
             </div>
-
             <div class="flex justify-between mt-5">
-
                 <div class="flex gap-2">
                     <span class="font-bold">{{ posts }}</span>
                     <span>posts</span>
                 </div>
-                <!-- <div class="flex gap-2">
+                <!--
+                <div class="flex gap-2">
                     <span>{{ followers }}</span>
                     <span>followers</span>
                 </div>
                 <div class="flex gap-2">
                     <span>{{ following }}</span>
                     <span>following</span>
-                </div> -->
-                
+                </div>
+                -->
             </div>
-
             <div class="flex flex-col text-left mt-5">
                 <h3 class="text-2xl">vouto</h3>
                 <p class="self-right text-gray-400">programmer</p>
             </div>
-            
-            
             <div class="flex gap-2 mt-2">
                 <span>💻</span>
                 <span>Desenvolvedor apaixonado por código! PHP, Python, JavaScript, Vue.js</span>
             </div>
-
             <div class="flex gap-2 mt-2">
                 <span>🚀</span>
                 <span>Construindo soluções e explorando novas tecnologias.</span>
             </div>
-
             <div class="flex gap-2 mt-2">
                 <span>🌐</span>
                 <span>Confira meu portfólio e acompanhe meus projetos!</span>
             </div>
-
             <div class="flex gap-2 mt-2">
                 <span>🗺️</span>
                 <span>Minas Gerais, Brazil</span>
             </div>
-
             <div class="flex gap-2 mt-2">
                 <span class="self-center">
                     <svg aria-label="Link icon" class="x1lliihq x1n2onr6 x7l2uk3" fill="currentColor" height="12" role="img" viewBox="0 0 24 24" width="12">
@@ -75,8 +75,18 @@ var videoUrl = ref("https://www.youtube.com/embed/BN0gBgGBjvs?si=GWtHjycHygGu2pt
         </div>
     </div>
 
+    <!-- Modal para opções de contato -->
+    <div v-if="showMessageModal" class="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center">
+        <div class="flex flex-col p-5 rounded shadow-lg border rounded w-1/3">
+            <h3 class="text-xl mb-4">Entre em Contato</h3>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded mb-2" @click="openEmailClient">Enviar Email</button>
+            <a class="bg-green-500 text-white py-2 px-4 rounded mb-2 text-center" href="https://wa.me/+5531972018637" target="_blank">WhatsApp</a>
+            <a class="bg-blue-600 text-white py-2 px-4 rounded mb-2 block text-center" href="https://www.linkedin.com/in/victorandraad" target="_blank">LinkedIn</a>
+            <button class="bg-gray-500 text-white py-2 px-4 rounded mt-2" @click="showMessageModal = false">Fechar</button>
+        </div>
+    </div>
+
     <!-- posts -->
-    
     <div class="posts flex flex-col justify-center items-center mt-20">
         <div class="flex gap-3 w-2/3 border rounded border-gray-600 p-5 mr-20 ml-20">
             <img class="rounded-full size-1/12 h-full" src="https://avatars.githubusercontent.com/u/68758638?v=4" alt="">
@@ -95,7 +105,7 @@ var videoUrl = ref("https://www.youtube.com/embed/BN0gBgGBjvs?si=GWtHjycHygGu2pt
                     </span>
                     <img src=".\assets\sorteador.png" alt="">
                 </div>
-            </div> 
+            </div>
         </div>
 
         <div class="flex gap-3 w-2/3 border rounded border-gray-600 p-5 mr-20 ml-20">
@@ -114,7 +124,7 @@ var videoUrl = ref("https://www.youtube.com/embed/BN0gBgGBjvs?si=GWtHjycHygGu2pt
                     Terminando esse projeto vou fazer ajustes no app TOMODORO.
                     </span>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <div class="flex gap-3 w-2/3 border rounded border-gray-600 p-5 mr-20 ml-20">
@@ -144,9 +154,27 @@ var videoUrl = ref("https://www.youtube.com/embed/BN0gBgGBjvs?si=GWtHjycHygGu2pt
                         ></iframe>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
-
-    
 </template>
+
+<style scoped>
+.contact-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.contact-link {
+  padding: 5px;
+  text-decoration: none;
+  color: #007bff;
+  margin: 5px 0;
+}
+</style>

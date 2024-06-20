@@ -1,6 +1,8 @@
 <template>
     <nav class="flex gap-10 pl-10 pt-5">
-      <img class="size-12" src=".\assets\logo.png" alt="">
+      <a href="#/">
+        <img class="size-12" src=".\assets\logo.png" alt="">
+      </a>
       <ul class="flex gap-10">
         <li><a href="#/">Início</a></li>
         <li><a href="#/about">Sobre</a></li>
@@ -20,7 +22,7 @@
   import Services from './Services.vue'
   import rodape from './components/footer.vue'
   import Roleta from './Roleta.vue'
-  
+
   const routes = {
     '/': Home,
     '/about' : About,
