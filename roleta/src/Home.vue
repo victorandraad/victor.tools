@@ -41,7 +41,7 @@ const openEmailClient = () => {
         <div class="flex flex-col gap-2 w-1/3 justify-center text-left">
             <h3 class="text-2xl">Victor Silva</h3>
             <p>Desenvolvedor apaixonado por tecnologia e inovação.</p>
-            <div class="flex gap-2 mt-4">
+            <div class="flex gap-2 mt-4 flex-wrap">
                 <button class="text-sm" type="button" @click="showMessageModal = true">Entrar em contato</button>
                 <button class="text-sm" type="button" @click="portifolio">Ver meu portfólio</button>
             </div>

@@ -36,7 +36,7 @@
           <div class="bg-white text-black p-1 rounded-lg">Time: {{ index + 1 }}</div>
         </div>
         <div v-for="c in team" class="rounded-lg border-r-2 border-b-2 mb-1 mt-1">
-          <div class="text-white p-1 rounded-lg"> {{ c.name }} </div>
+          <div class="text-white p-1 rounded-lg text-container"> {{ c.name }} </div>
         </div>
       </div>
     </div>
@@ -48,11 +48,11 @@
     <div class="flex gap-10 justify-center flex-wrap mt-3">
       <div v-for="(log, logIndex) in logs" :key="logIndex" class="mt-2 flex flex-col border-blue w-1/4 m-10">
         <h3 class="self-center bg-red-800 text-white w-full rounded-lg">Log {{ logIndex + 1 }}:</h3>
-        <div class="flex justify-center">
-          <div v-for="(team, index) in log" :key="index" class="border p-2 m-2 w-1/2">
+        <div class="flex justify-center flex-wrap">
+          <div v-for="(team, index) in log" :key="index" class="border p-2 m-2 w-full flex flex-col flex-wrap justify-center">
             <h4 class="bg-white rounded text-black">Time {{ index + 1 }}:</h4>
             <ul>
-              <li v-for="player in team" :key="player.name">{{ player.name }}</li>
+              <li class="break-all" v-for="player in team" :key="player.name">{{ player.name }}</li>
             </ul>
           </div>
         </div>
@@ -152,5 +152,13 @@ function handleShuffleAndLog() {
 .size-20 {
   width: 500px;
   height: 5rem;
+}
+
+.text-container {
+    overflow: hidden;          /* Prevents overflow */
+    word-wrap: break-word;     /* Breaks long words */
+    /* Optional: For ellipsis effect */
+    /* white-space: nowrap;
+    text-overflow: ellipsis; */
 }
 </style>
