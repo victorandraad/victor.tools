@@ -15,7 +15,8 @@ const openEmailClient = () => {
     window.open('mailto:victor.daniels@outlook.com.br', '_blank');
 };
 
-const videoUrl = ref("https://www.youtube.com/embed/BN0gBgGBjvs?si=GWtHjycHygGu2pti");
+const video1 = ref("https://www.youtube.com/embed/BN0gBgGBjvs");
+const video2 = ref("https://www.youtube.com/embed/IlYqzYajhQ4");
 </script>
 
 <template>
@@ -87,8 +88,38 @@ const videoUrl = ref("https://www.youtube.com/embed/BN0gBgGBjvs?si=GWtHjycHygGu2
     </div>
 
     <!-- posts -->
-    <div class="posts flex flex-col justify-center items-center mt-20">
-        <div class="flex gap-3 w-2/3 border rounded border-gray-600 p-5 mr-20 ml-20">
+    <div class="posts flex w-full flex-col justify-center items-center mt-20">
+        <div class="flex gap-3 w-full border rounded border-gray-600 p-5">
+            <img class="rounded-full size-1/12 h-full" src="https://avatars.githubusercontent.com/u/68758638?v=4" alt="">
+            <div class="flex flex-col">
+                <!-- user details -->
+                <div class="flex gap- text-2xl flex-wrap">
+                    <!-- username -->
+                    <span class="font-bold">vouto</span>
+                    <!-- user tag + date -->
+                    <span class="text-gray-500">@luzakayn - 15 May</span>
+                </div>
+                <!-- post message -->
+                <div class="flex flex-col flex-wrap">
+                    <span class="text-2xl text-left">
+                        Atualização no TOMODORO!
+                    </span>
+                    <div class="mt-5">
+                        <iframe
+                        class="max-w-full"
+                        width="560"
+                        height="315"
+                        :src="video2"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex gap-3 border rounded border-gray-600 p-5">
             <img class="rounded-full size-1/12 h-full" src="https://avatars.githubusercontent.com/u/68758638?v=4" alt="">
             <div class="flex flex-col">
                 <!-- user details -->
@@ -108,7 +139,7 @@ const videoUrl = ref("https://www.youtube.com/embed/BN0gBgGBjvs?si=GWtHjycHygGu2
             </div>
         </div>
 
-        <div class="flex gap-3 w-2/3 border rounded border-gray-600 p-5 mr-20 ml-20">
+        <div class="flex gap-3 w-full border rounded border-gray-600 p-5">
             <img class="rounded-full size-1/12 h-full" src="https://avatars.githubusercontent.com/u/68758638?v=4" alt="">
             <div class="flex flex-col">
                 <!-- user details -->
@@ -127,7 +158,7 @@ const videoUrl = ref("https://www.youtube.com/embed/BN0gBgGBjvs?si=GWtHjycHygGu2
             </div>
         </div>
 
-        <div class="flex gap-3 w-2/3 border rounded border-gray-600 p-5 mr-20 ml-20">
+        <div class="flex gap-3 w-full border rounded border-gray-600 p-5">
             <img class="rounded-full size-1/12 h-full" src="https://avatars.githubusercontent.com/u/68758638?v=4" alt="">
             <div class="flex flex-col">
                 <!-- user details -->
@@ -147,7 +178,7 @@ const videoUrl = ref("https://www.youtube.com/embed/BN0gBgGBjvs?si=GWtHjycHygGu2
                         class="max-w-full"
                         width="560"
                         height="315"
-                        :src="videoUrl"
+                        :src="video1"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen
