@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const posts = ref(3);
+const posts = ref(4);
 const followers = ref(100);
 const following = ref(100);
 
@@ -97,7 +97,7 @@ const video2 = ref("https://www.youtube.com/embed/IlYqzYajhQ4");
                     <!-- username -->
                     <span class="font-bold">vouto</span>
                     <!-- user tag + date -->
-                    <span class="text-gray-500">@luzakayn - 15 May</span>
+                    <span class="text-gray-500">@luzakayn - 22 Jun</span>
                 </div>
                 <!-- post message -->
                 <div class="flex flex-col flex-wrap">
