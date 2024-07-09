@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const posts = ref(4);
+const posts = ref(5);
 const followers = ref(100);
 const following = ref(100);
 
@@ -17,6 +17,7 @@ const openEmailClient = () => {
 
 const video1 = ref("https://www.youtube.com/embed/BN0gBgGBjvs");
 const video2 = ref("https://www.youtube.com/embed/IlYqzYajhQ4");
+const video3 = ref("https://www.youtube.com/embed/0DI_Wp-1RiY");
 </script>
 
 <template>
@@ -89,6 +90,37 @@ const video2 = ref("https://www.youtube.com/embed/IlYqzYajhQ4");
 
     <!-- posts -->
     <div class="posts flex w-full flex-col justify-center items-center mt-20">
+        <div class="flex gap-3 w-full border rounded border-gray-600 p-5">
+            <img class="rounded-full size-1/12 h-full" src="https://avatars.githubusercontent.com/u/68758638?v=4" alt="">
+            <div class="flex flex-col">
+                <!-- user details -->
+                <div class="flex gap- text-2xl flex-wrap">
+                    <!-- username -->
+                    <span class="font-bold">vouto</span>
+                    <!-- user tag + date -->
+                    <span class="text-gray-500">@luzakayn - 09 Jul</span>
+                </div>
+                <!-- post message -->
+                <div class="flex flex-col flex-wrap">
+                    <span class="text-2xl text-left">
+                        Versão fatorada do tomodoro, agora fica bem mais fácil de atualizar e sem bugs pelo que eu testei, teste a nova versão do novo TOMODORO! <br>
+                        <a href="https://github.com/andradavic/to-do-list-so-que-melhor">Link do repositório</a>
+                    </span>
+                    <div class="mt-5">
+                        <iframe
+                        class="max-w-full"
+                        width="560"
+                        height="315"
+                        :src="video3"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="flex gap-3 w-full border rounded border-gray-600 p-5">
             <img class="rounded-full size-1/12 h-full" src="https://avatars.githubusercontent.com/u/68758638?v=4" alt="">
             <div class="flex flex-col">
