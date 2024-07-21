@@ -32,7 +32,7 @@ const openEmailClient = () => {
             <h1 id="typewriter"></h1>
             <div class="flex gap-2 self-center mt-5">
                 <img class="size-5 self-center" src=".\assets\github.svg" alt="github_icon">
-                <a href="https://github.com/andradavic" target="_blank">github.com/andradavic</a>
+                <a href="https://github.com/victorandraad" target="_blank">github.com/victorandraad</a>
             </div>
         </div>
     </div>
