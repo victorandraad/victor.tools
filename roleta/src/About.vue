@@ -6,7 +6,7 @@ const followers = ref(100);
 const following = ref(100);
 
 const follow = () => {
-    window.open('https://www.instagram.com/victordanielkk/', '_blank');
+    window.open('https://www.instagram.com/euvictor.daniel/', '_blank');
 };
 
 const showMessageModal = ref(false);
@@ -72,7 +72,7 @@ const video3 = ref("https://www.youtube.com/embed/0DI_Wp-1RiY");
                         <path d="m9.726 5.123 1.228-1.228a6.47 6.47 0 0 1 9.15 9.152l-1.227 1.227m-4.603 4.603-1.228 1.228a6.47 6.47 0 0 1-9.15-9.152l1.227-1.227" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="8.471" x2="15.529" y1="15.529" y2="8.471"></line>
                     </svg>
                 </span>
-                <a href="https://github.com/andradavic" target="_blank">https://github.com/andradavic</a>
+                <a href="https://github.com/victorandraad" target="_blank">https://github.com/victorandraad</a>
             </div>
         </div>
     </div>
